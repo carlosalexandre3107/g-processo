@@ -1,0 +1,7 @@
+C:\GProcessos\Arquivo\bin\Debug\Arquivo.dll
+C:\GProcessos\Arquivo\bin\Debug\Arquivo.pdb
+C:\GProcessos\Arquivo\bin\Debug\Dominio.dll
+C:\GProcessos\Arquivo\bin\Debug\Dominio.pdb
+C:\GProcessos\Arquivo\obj\Debug\Arquivo.csprojResolveAssemblyReference.cache
+C:\GProcessos\Arquivo\obj\Debug\Arquivo.dll
+C:\GProcessos\Arquivo\obj\Debug\Arquivo.pdb

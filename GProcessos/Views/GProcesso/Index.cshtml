@@ -1,0 +1,104 @@
+﻿@{
+    ViewBag.Title = "Sistema GProcesso";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/angularjs")
+</head>
+<body ng-app="gProcesso" ng-controller="ctrlGProcesso">
+    @*<div class="container">
+        <h2>Cadastro de Empresa: </h2>
+        <form>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" ng-model="nomeEmpresa">
+            </div>
+            <div class="form-group">
+                <label for="cnpj">CNPJ:</label>
+                <input type="number" class="form-control" ng-model="cnpjEmpresa">
+            </div>
+            <div class="form-group">
+                <label for="uf">Estato:</label>
+                <select class="form-control" ng-model="ufEmpresa">
+                    <option>Rio de Janeiro</option>
+                    <option>São Paulo</option>
+                    <option>Minas Gerais</option>
+                    <option>Amazonas</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" ng-click="SalvarEmpresa()">Salvar</button>
+        </form>
+    </div>
+    <hr>*@
+    <div class="container">
+        <h2>Cadastro do Processo: </h2>
+            <div class="form-group">
+                <label>Número:</label>
+                <input type="text" class="form-control" ng-model="Processo.Numero">
+            </div>
+            <div class="form-group">
+                <label>Ativo:</label>
+                <input type="checkbox" class="form-control" ng-model="Processo.Ativo">
+            </div>
+            <div class="form-group">
+                <label>Valor:</label>
+                <input type="number" class="form-control" ng-model="Processo.Valor">
+            </div>
+            <div class="form-group">
+                <label>Estado:</label>
+                <select class="form-control" ng-model="Processo.Estado">
+                    <option>Rio de Janeiro</option>
+                    <option>São Paulo</option>
+                    <option>Minas Gerais</option>
+                    <option>Amazonas</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Cliente:</label>
+                <select class="form-control" ng-model="Processo.Empresa">
+                    <option>Empresa A</option>
+                    <option>Empresa B</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Data de Início:</label>
+                <input type="date" class="form-control" ng-model="Processo.DataInicio">
+            </div>
+            <button class="btn btn-primary" ng-click="SalvarProcesso()">Salvar</button>
+        <hr>
+        <div class="container">
+            <h2>Tabela de Processos</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Estado</th>
+                        <th>Valor</th>
+                        <th>Data Início</th>
+                        <th>Ativo</th>
+                        <th>Empresa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="x in Processos">
+                        <td>{{ x.Numero }}</td>
+                        <td>{{ x.Estado }}</td>
+                        <td>{{ x.Valor }}</td>
+                        <td>{{ x.DataInicio | filterConverteShortDataJson }}</td>
+                        <td>{{ x.Ativo |  filterBoolean }}</td>
+                        <td>{{ x.Empresa }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+</body>
+</html>

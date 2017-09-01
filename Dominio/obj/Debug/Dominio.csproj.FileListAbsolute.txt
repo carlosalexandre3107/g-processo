@@ -1,0 +1,4 @@
+C:\GProcessos\Dominio\bin\Debug\Dominio.dll
+C:\GProcessos\Dominio\bin\Debug\Dominio.pdb
+C:\GProcessos\Dominio\obj\Debug\Dominio.dll
+C:\GProcessos\Dominio\obj\Debug\Dominio.pdb
